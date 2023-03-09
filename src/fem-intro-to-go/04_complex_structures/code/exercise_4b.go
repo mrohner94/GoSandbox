@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func average(inputs ...float64) float64 {
-	var sum float64 = 0
-	var length int = len(inputs)
+	sum := 0.0
+	length := len(inputs)
+
 	for _, value := range inputs {
 		sum += value
 	}
