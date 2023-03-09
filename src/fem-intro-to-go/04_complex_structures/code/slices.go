@@ -80,12 +80,12 @@ func main() {
 
 	// ***************************
 
-	// originalSlice := []int{1, 2, 3}
-	// destination := make([]int, len(originalSlice))
+	originalSlice := []int{1, 2, 3}
+	destination := make([]int, len(originalSlice))
 
-	// fmt.Println("Before Copy:", originalSlice, destination)
+	fmt.Println("Before Copy:", originalSlice, destination)
 
-	// mysteryValue := copy(destination, originalSlice)
+	mysteryValue := copy(destination, originalSlice)
 
-	// // fmt.Println("After Copy:", originalSlice, destination, mysteryValue)
+	fmt.Println("After Copy:", originalSlice, destination, mysteryValue)
 }

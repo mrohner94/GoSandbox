@@ -9,4 +9,5 @@ func main() {
 		fmt.Println(value)
 	}
 	fmt.Println(scores)
+
 }
