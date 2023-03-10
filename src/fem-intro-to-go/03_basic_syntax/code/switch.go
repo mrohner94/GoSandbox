@@ -1,48 +1,48 @@
-// // Uncomment the entire file
+// // // Uncomment the entire file
 
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-func main() {
+// func main() {
 
-	var city string = "xyz"
+// 	var city string = "xyz"
 
-	switch city {
-	case "Des Moines":
-		fmt.Println("You live in Iowa")
-	case "Minneapolis,", "St Paul":
-		fmt.Println("You live in Minnesota")
-	case "Madison":
-		fmt.Println("You live in Wisconsin")
-	default:
-		fmt.Println("You're not from around here.")
-	}
+// 	switch city {
+// 	case "Des Moines":
+// 		fmt.Println("You live in Iowa")
+// 	case "Minneapolis,", "St Paul":
+// 		fmt.Println("You live in Minnesota")
+// 	case "Madison":
+// 		fmt.Println("You live in Wisconsin")
+// 	default:
+// 		fmt.Println("You're not from around here.")
+// 	}
 
-	// ****************************
-	var i int
+// 	// ****************************
+// 	var i int
 
-	switch {
-	case i > 10:
-		fmt.Println("Greater than 10")
-	case i < 10:
-		fmt.Println("Less than 10")
-	default:
-		fmt.Println("Is 10")
-	}
+// 	switch {
+// 	case i > 10:
+// 		fmt.Println("Greater than 10")
+// 	case i < 10:
+// 		fmt.Println("Less than 10")
+// 	default:
+// 		fmt.Println("Is 10")
+// 	}
 
-	// 	// ****************************
-	var x int = 9
+// 	// 	// ****************************
+// 	var x int = 9
 
-	switch {
-	case x != 10:
-		fmt.Println("Does not equal 10")
-		fallthrough
-	case x < 10:
-		fmt.Println("Less than 10")
-	case x > 10:
-		fmt.Println("Greater than 10")
-	default:
-		fmt.Println("Is 10")
-	}
-}
+// 	switch {
+// 	case x != 10:
+// 		fmt.Println("Does not equal 10")
+// 		fallthrough
+// 	case x < 10:
+// 		fmt.Println("Less than 10")
+// 	case x > 10:
+// 		fmt.Println("Greater than 10")
+// 	default:
+// 		fmt.Println("Is 10")
+// 	}
+// }
