@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-
-	"GoSandbox/src/fem-intro-to-go/05_toolkit/code/utils"
+	"xxx/src/fem-intro-to-go/05_toolkit/code/utils"
 )
 
 func calculateImportantData() int {
