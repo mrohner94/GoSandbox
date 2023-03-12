@@ -16,6 +16,10 @@ type Group struct {
 }
 
 func describeGroup(g Group) string {
+	if len(g.users) > 2 {
+		g.spaceAvailable = false
+	}
+
 	desc := fmt.Sprintf("This user group has %d users.  The newest user is %s. Accepting new users: %t", len(g.users), g.newestUser.FirstName+" "+g.newestUser.LastName, g.spaceAvailable)
 	return desc
 }
@@ -28,12 +32,13 @@ func describeUser(u User) string {
 func main() {
 	u := User{ID: 1, FirstName: "Marilyn", LastName: "Monroe", Email: "marilyn.monroe@gmail.com"}
 	u2 := User{ID: 2, FirstName: "Kurt", LastName: "Cobain", Email: "kcobain@gmail.com"}
+	u3 := User{ID: 2, FirstName: "Kurt", LastName: "Cobain", Email: "kcobain@gmail.com"}
 
 	x := u
 
 	g := Group{
 		role:           "Whatever",
-		users:          []User{u, u2},
+		users:          []User{u, u2, u3},
 		newestUser:     u2,
 		spaceAvailable: true,
 	}
@@ -47,4 +52,5 @@ func main() {
 
 	fmt.Println(userDescription)
 	fmt.Println(groupDescription)
+	fmt.Println(g)
 }
