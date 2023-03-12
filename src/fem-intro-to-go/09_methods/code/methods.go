@@ -13,9 +13,18 @@ func describeUser(u User) string {
 	return desc
 }
 
+func (u *User) describe() string {
+	desc := fmt.Sprintf("Name: %s %s, Email: %s", u.FirstName, u.LastName, u.Email)
+	return desc
+}
+
+
 func main() {
 	user := User{ID: 1, FirstName: "Marilyn", LastName: "Monroe", Email: "marilyn.monroe@gmail.com"}
 
 	desc := describeUser(user)
+	desc2 := user.describe()
+	
 	fmt.Println(desc)
+	fmt.Println(desc2)
 }
