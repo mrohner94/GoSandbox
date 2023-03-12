@@ -2,8 +2,11 @@ package main
 
 import (
 	"fmt"
+	"sync"
 	"time"
 )
+
+var wg sync.WaitGroup
 
 func say(s string) {
 	for i := 0; i < 3; i++ {
@@ -12,7 +15,26 @@ func say(s string) {
 	}
 }
 
+func handlePanic() {
+	if r := recover(); r != nil {
+		fmt.Println("PANIC")
+	}
+}
+
+func printStuff(num int) {
+	defer wg.Done()
+	defer handlePanic()
+
+	for i := 0; i < num; i++ {
+		fmt.Println(i)
+		time.Sleep(time.Millisecond * 300)
+	}
+}
+
 func main() {
-	say("Hello")
-	say("There")
+	wg.Add(3)
+	go printStuff(40)
+	go printStuff(3)
+	go printStuff(13)
+	wg.Wait()
 }
