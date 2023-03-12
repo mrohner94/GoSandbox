@@ -1,30 +1,29 @@
 package main
 
-import "fmt"
+// import "fmt"
 
-// User is a user type
-type User struct {
-	ID                         int
-	FirstName, LastName, Email string
-}
+// // User is a user type
+// type User struct {
+// 	ID                         int
+// 	FirstName, LastName, Email string
+// }
 
-func describeUser(u User) string {
-	desc := fmt.Sprintf("Name: %s %s, Email: %s", u.FirstName, u.LastName, u.Email)
-	return desc
-}
+// func describeUser(u User) string {
+// 	desc := fmt.Sprintf("Name: %s %s, Email: %s", u.FirstName, u.LastName, u.Email)
+// 	return desc
+// }
 
-func (u *User) describe() string {
-	desc := fmt.Sprintf("Name: %s %s, Email: %s", u.FirstName, u.LastName, u.Email)
-	return desc
-}
+// func (u *User) describe() string {
+// 	desc := fmt.Sprintf("Name: %s %s, Email: %s", u.FirstName, u.LastName, u.Email)
+// 	return desc
+// }
 
+// func main() {
+// 	user := User{ID: 1, FirstName: "Marilyn", LastName: "Monroe", Email: "marilyn.monroe@gmail.com"}
 
-func main() {
-	user := User{ID: 1, FirstName: "Marilyn", LastName: "Monroe", Email: "marilyn.monroe@gmail.com"}
+// 	desc := describeUser(user)
+// 	desc2 := user.describe()
 
-	desc := describeUser(user)
-	desc2 := user.describe()
-	
-	fmt.Println(desc)
-	fmt.Println(desc2)
-}
+// 	fmt.Println(desc)
+// 	fmt.Println(desc2)
+// }
